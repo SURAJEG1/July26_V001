@@ -3,15 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="july06_TestNG.StaticDropdown">
+      <class name="july07_TestNG.DynamicTestRunner">
         <methods>
-          <include name="staticDropdownSelectByValue"/>
-          <include name="tearDown"/>
+          <include name="dynamicSearchAndListDropdown"/>
+          <include name="close"/>
           <include name="setup"/>
-          <include name="staticDropdownSelectByIndex"/>
-          <include name="staticDropdownSelectBySendKeysAction"/>
         </methods>
-      </class> <!-- july06_TestNG.StaticDropdown -->
+      </class> <!-- july07_TestNG.DynamicTestRunner -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
