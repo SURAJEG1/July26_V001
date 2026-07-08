@@ -1,0 +1,1 @@
+{"uuid":"e7135501-7134-42eb-beec-5ba9e8cb3195","name":"july07_TestNG.BaseClass.setup","children":["6291085f-f518-40a4-a3f8-f3dec47f0256"],"description":"","befores":[{"name":"setup","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1783426492136,"stop":1783426495440}],"afters":[],"start":1783426492135,"stop":1783426495441}

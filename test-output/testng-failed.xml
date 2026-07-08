@@ -6,8 +6,9 @@
       <class name="july07_TestNG.DynamicTestRunner">
         <methods>
           <include name="dynamicSearchAndListDropdown"/>
-          <include name="close"/>
+          <include name="tearDown"/>
           <include name="setup"/>
+          <include name="searchProd"/>
         </methods>
       </class> <!-- july07_TestNG.DynamicTestRunner -->
     </classes>
