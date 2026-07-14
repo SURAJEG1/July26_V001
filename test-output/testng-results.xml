@@ -1,37 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-07-07T17:44:52 IST" name="Default suite" finished-at="2026-07-07T17:45:55 IST" duration-ms="63192">
+  <suite started-at="2026-07-13T23:58:35 IST" name="Default suite" finished-at="2026-07-13T23:59:27 IST" duration-ms="52409">
     <groups>
     </groups>
-    <test started-at="2026-07-07T17:44:52 IST" name="Default test" finished-at="2026-07-07T17:45:55 IST" duration-ms="63192">
-      <class name="july07_TestNG.DynamicTestRunner">
-        <test-method is-config="true" signature="setup()[pri:0, instance:july07_TestNG.DynamicTestRunner@7bbc8656]" started-at="2026-07-07T17:44:52 IST" name="setup" finished-at="2026-07-07T17:44:55 IST" duration-ms="3322" status="PASS">
+    <test started-at="2026-07-13T23:58:35 IST" name="Default test" finished-at="2026-07-13T23:59:27 IST" duration-ms="52409">
+      <class name="july13_TestNG.DynamicSearchAndListDropdown">
+        <test-method is-config="true" signature="setup()[pri:0, instance:july13_TestNG.DynamicSearchAndListDropdown@2584b82d]" started-at="2026-07-13T23:58:35 IST" name="setup" finished-at="2026-07-13T23:58:45 IST" duration-ms="9652" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="dynamicSearchAndListDropdown()[pri:0, instance:july07_TestNG.DynamicTestRunner@7bbc8656]" started-at="2026-07-07T17:44:55 IST" name="dynamicSearchAndListDropdown" finished-at="2026-07-07T17:45:18 IST" duration-ms="23121" status="PASS">
+        <test-method signature="dynamicSearch_Example1()[pri:0, instance:july13_TestNG.DynamicSearchAndListDropdown@2584b82d]" started-at="2026-07-13T23:58:45 IST" name="dynamicSearch_Example1" finished-at="2026-07-13T23:58:52 IST" duration-ms="6809" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- dynamicSearchAndListDropdown -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:july07_TestNG.DynamicTestRunner@7bbc8656]" started-at="2026-07-07T17:45:18 IST" name="tearDown" finished-at="2026-07-07T17:45:19 IST" duration-ms="770" status="PASS">
+        </test-method> <!-- dynamicSearch_Example1 -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:july13_TestNG.DynamicSearchAndListDropdown@2584b82d]" started-at="2026-07-13T23:58:52 IST" name="tearDown" finished-at="2026-07-13T23:58:53 IST" duration-ms="585" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:july07_TestNG.DynamicTestRunner@7bbc8656]" started-at="2026-07-07T17:45:19 IST" name="setup" finished-at="2026-07-07T17:45:21 IST" duration-ms="2272" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:july13_TestNG.DynamicSearchAndListDropdown@2584b82d]" started-at="2026-07-13T23:58:53 IST" name="setup" finished-at="2026-07-13T23:58:56 IST" duration-ms="3443" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="searchProd()[pri:0, instance:july07_TestNG.DynamicTestRunner@7bbc8656]" started-at="2026-07-07T17:45:21 IST" name="searchProd" finished-at="2026-07-07T17:45:53 IST" duration-ms="31621" status="PASS">
+        <test-method signature="dynamicSearch_Example2()[pri:0, instance:july13_TestNG.DynamicSearchAndListDropdown@2584b82d]" started-at="2026-07-13T23:58:56 IST" name="dynamicSearch_Example2" finished-at="2026-07-13T23:59:08 IST" duration-ms="12294" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- searchProd -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:july07_TestNG.DynamicTestRunner@7bbc8656]" started-at="2026-07-07T17:45:53 IST" name="tearDown" finished-at="2026-07-07T17:45:55 IST" duration-ms="1619" status="PASS">
+        </test-method> <!-- dynamicSearch_Example2 -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:july13_TestNG.DynamicSearchAndListDropdown@2584b82d]" started-at="2026-07-13T23:59:08 IST" name="tearDown" finished-at="2026-07-13T23:59:09 IST" duration-ms="531" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- july07_TestNG.DynamicTestRunner -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:july13_TestNG.DynamicSearchAndListDropdown@2584b82d]" started-at="2026-07-13T23:59:09 IST" name="setup" finished-at="2026-07-13T23:59:17 IST" duration-ms="8567" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="dynamicSearch_Example3()[pri:0, instance:july13_TestNG.DynamicSearchAndListDropdown@2584b82d]" started-at="2026-07-13T23:59:17 IST" name="dynamicSearch_Example3" finished-at="2026-07-13T23:59:27 IST" duration-ms="9142" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- dynamicSearch_Example3 -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:july13_TestNG.DynamicSearchAndListDropdown@2584b82d]" started-at="2026-07-13T23:59:27 IST" name="tearDown" finished-at="2026-07-13T23:59:27 IST" duration-ms="606" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- july13_TestNG.DynamicSearchAndListDropdown -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
