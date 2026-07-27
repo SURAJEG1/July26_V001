@@ -1,11 +1,12 @@
-package july19_TestNG;
+package july18_TestNG;
 
 import java.time.Duration;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
-import org.testng.annotations.*;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
 
 public class BaseClass {
 	
@@ -13,17 +14,15 @@ public class BaseClass {
 	ReadConfig readconfig = new ReadConfig();
 	String browser = readconfig.getBrowser();
 	String baseUrl = readconfig.getBaseUrl();
-	String username = readconfig.getUsername();
-	String password = readconfig.getUsername();
 	
-	public static WebDriver driver;	
-	@BeforeClass
-	@Parameters("browser")
+	
+	public static WebDriver driver;
+	@BeforeTest
 	public void setup() 
 	{
 		switch(browser.toLowerCase()) 
 		{
-		case "chrome":
+		case "":
 			driver = new ChromeDriver();
 			driver.manage().window().maximize();
 			break;
@@ -33,21 +32,28 @@ public class BaseClass {
 			driver.manage().window().maximize();
 			break;
 
-		default:
+		default :
 			driver = null;
 			break;
 		}
-		
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 	}
 	
 	
 	
-	@AfterClass
+	@AfterTest
 	public void tearDown() 
 	{
 		driver.close();
 	}
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	

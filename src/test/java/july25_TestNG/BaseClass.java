@@ -1,4 +1,4 @@
-package july19_TestNG;
+package july25_TestNG;
 
 import java.time.Duration;
 
@@ -8,22 +8,20 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.annotations.*;
 
 public class BaseClass {
-	
+
 	//create object of ReadConfig class
 	ReadConfig readconfig = new ReadConfig();
 	String browser = readconfig.getBrowser();
 	String baseUrl = readconfig.getBaseUrl();
-	String username = readconfig.getUsername();
-	String password = readconfig.getUsername();
-	
-	public static WebDriver driver;	
+
+
+	public static WebDriver driver;
 	@BeforeClass
-	@Parameters("browser")
 	public void setup() 
 	{
 		switch(browser.toLowerCase()) 
 		{
-		case "chrome":
+		case "":
 			driver = new ChromeDriver();
 			driver.manage().window().maximize();
 			break;
@@ -37,7 +35,6 @@ public class BaseClass {
 			driver = null;
 			break;
 		}
-		
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 	}
 	
@@ -48,23 +45,34 @@ public class BaseClass {
 	{
 		driver.close();
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }

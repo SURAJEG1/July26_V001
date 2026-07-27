@@ -1,4 +1,4 @@
-package july19_TestNG;
+package july18_TestNG;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -6,16 +6,15 @@ import java.util.Properties;
 
 public class ReadConfig {
 	
-	//create object of Properties class
 	Properties properties;
-	String configPropertiesPath = "E:\\InfoEge Automation Project\\July26_V001\\src\\main\\java\\globalResourceProperties\\config.properties";
+	String configPropertiesFilePath = "";
 	
 	//constructor
 	public ReadConfig() 
 	{
 		try {
 			properties = new Properties();
-			FileInputStream fis = new FileInputStream(configPropertiesPath);
+			FileInputStream fis = new FileInputStream(configPropertiesFilePath);
 			properties.load(fis);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
@@ -24,7 +23,7 @@ public class ReadConfig {
 	}
 	
 	
-	//create methods for browser and Url key
+	//create methods for browser and Url key.
 	public String getBrowser() 
 	{
 		String value = properties.getProperty("browser");
@@ -35,6 +34,7 @@ public class ReadConfig {
 	}
 	
 	
+	
 	public String getBaseUrl() 
 	{
 		String value = properties.getProperty("baseUrl");
@@ -42,21 +42,6 @@ public class ReadConfig {
 			return value;
 		else
 			throw new RuntimeException("baseUrl is not spacified in config.properties file");
-	}
-	
-	
-	
-	public String getUsername() 
-	{
-		String value = properties.getProperty("username");
-		return value;
-	}
-	
-	
-	public String getPassword() 
-	{
-		String value = properties.getProperty("password");
-		return value;
 	}
 	
 	
