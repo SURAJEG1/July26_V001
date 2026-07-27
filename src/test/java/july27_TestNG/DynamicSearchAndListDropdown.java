@@ -1,4 +1,4 @@
-package july15_TestNG;
+package july27_TestNG;
 
 import java.time.Duration;
 import java.util.List;
@@ -12,8 +12,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.*;
 
 public class DynamicSearchAndListDropdown {
-
-	WebDriver driver;	
+	
+	
+	WebDriver driver;
 	@BeforeMethod
 	public void setup() 
 	{
@@ -22,92 +23,113 @@ public class DynamicSearchAndListDropdown {
 		driver.get("https://www.amazon.in");
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 	}
-
-
-
+	
+	
 	@Test
-	public void dynamicSearchAndDropdownExample1() throws InterruptedException 
+	public void dynamicSearchAndDropdown_Example_1() throws InterruptedException 
 	{
 		WebElement searchBox = driver.findElement(By.id("twotabsearchtextbox"));
-		searchBox.sendKeys("lap");
+		searchBox.sendKeys("pen");
+		
+		List<WebElement> dynamicList = driver.findElements(By.xpath("//span[@class='s-heavy']"));
+		Thread.sleep(2000);
+		int count = dynamicList.size();
+		System.out.println(count);
+		dynamicList.get(5).click();
+	}
+	
 
+	@Test
+	public void dynamicSearchAndDropdown_Example_2() throws InterruptedException 
+	{
+		WebElement searchBox = driver.findElement(By.id("twotabsearchtextbox"));
+		searchBox.sendKeys("pen");
+		
 		Thread.sleep(1000);
 		List<WebElement> dynamicList = driver.findElements(By.xpath("//span[@class='s-heavy']"));
 		int count = dynamicList.size();
 		System.out.println(count);
-
+		
 		for(int i=0; i<=dynamicList.size(); i++) 
 		{
 			System.out.println(dynamicList.get(i).getText());
-
-			if(dynamicList.get(i).getText().contains("top bags for men office use")) 
+			
+			if(dynamicList.get(i).getText().contains("drive 128")) 
 			{
 				dynamicList.get(i).click();
 				break;
 			}
 		}
 	}
-
-
+	
+	
+	
 	@Test
-	public void dynamicSearchAndDropdownExample2() 
+	public void dynamicSearchAndDropdown_Example_3() throws InterruptedException 
 	{
 		WebElement searchBox = driver.findElement(By.id("twotabsearchtextbox"));
 		searchBox.sendKeys("pen");
-
-		//Apply Explicit Wait to locate Xpath of dynamic Element.
+		
+		Thread.sleep(2000);
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-
 		List<WebElement> dynamicList = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//span[@class='s-heavy']")));
+		
 		int count = dynamicList.size();
 		System.out.println(count);
-	}
-
-
-
-	@Test
-	public void dynamicSearchAndDropdownExample3() 
-	{
-		WebElement searchBox = driver.findElement(By.id("twotabsearchtextbox"));
-		searchBox.sendKeys("pen");
-
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		List<WebElement> dynamicList = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//span[@class='s-heavy']")));
-		System.out.println(dynamicList.size());
-
-		for(WebElement element : dynamicList) 
+		
+		for(WebElement element:dynamicList) 
 		{
 			System.out.println(element.getText());
-			if(element.getText().contains("cil pouch for girls aesthetic")) 
+			if(element.getText().contains("drive 128"))
 			{
 				element.click();
 				break;
 			}
 		}
+		
+		
 	}
-
-
-
-
-
-
-
-
-
-
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	@AfterMethod
 	public void tearDown() 
 	{
 		driver.close();
 	}
-
-
-
-
-
-
-
-
-
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 }
