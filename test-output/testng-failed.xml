@@ -3,13 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="july27_TestNG.DynamicSearchAndListDropdown">
+      <class name="july24_TestNG.DynamicSearchAndListDropdown">
         <methods>
-          <include name="dynamicSearchAndDropdown_Example_2"/>
+          <include name="dynamicSearchAndDropdownList_Example2"/>
           <include name="setup"/>
           <include name="tearDown"/>
+          <include name="dynamicSearchAndDropdownList_Example1"/>
         </methods>
-      </class> <!-- july27_TestNG.DynamicSearchAndListDropdown -->
+      </class> <!-- july24_TestNG.DynamicSearchAndListDropdown -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
